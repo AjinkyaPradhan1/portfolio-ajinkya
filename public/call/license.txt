@@ -1,0 +1,11 @@
+Model Information:
+* title:	call-us black guy
+* source:	https://sketchfab.com/3d-models/call-us-black-guy-6ceb6e355cad4e029fcbf2b9cd3c7e19
+* author:	Leonardo Carvalho (https://sketchfab.com/livrosparacriancas)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "call-us black guy" (https://sketchfab.com/3d-models/call-us-black-guy-6ceb6e355cad4e029fcbf2b9cd3c7e19) by Leonardo Carvalho (https://sketchfab.com/livrosparacriancas) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
