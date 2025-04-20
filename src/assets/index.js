@@ -32,7 +32,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
-import javaDev from './javaDev.svg'
+import javaDev from './javaDev.png'
 import webDev from './webDev.png'
 import fullStackDev from './fullStackDev.png'
 import frontEnd from './frontEnd.png'
