@@ -6,17 +6,17 @@ import { ComputersCanvas,ManCanvas,RobotCanvas,RoomViewCanvas } from "./canvas";
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-      <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+      <div className={`absolute inset-0 top-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col sm:flex-row items-start gap-5`}>
+      <div className='flex flex-row sm:flex-col justify-start items-center sm:mt-5'>
+          <div className='w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-[#915EFF]' />
+          <div className='h-32 sm:h-80 w-1 violet-gradient mt-2 sm:mt-0' />
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          <h1 className={`${styles.heroHeadText} text-white text-[32px] sm:text-[60px]`}>
             Hi, I'm <span className='text-[#915EFF]'>Ajinkya Pradhan</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText} mt-2 text-white-100 text-[16px] sm:text-[24px]`}>
             I am a Skilled Software Developer <br className='sm:block hidden' />
             Dedicated to delivering innovative solutions 
           </p>
