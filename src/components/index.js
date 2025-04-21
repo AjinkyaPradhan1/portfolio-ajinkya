@@ -10,6 +10,7 @@ import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Certifications from './Certifications';
 import CLangSkills from './CLangSkills';
+import Footer from './Footer';
 
 
 export {
@@ -27,5 +28,6 @@ export {
   ComputersCanvas, 
   StarsCanvas,
   Certifications,
-  CLangSkills
+  CLangSkills,
+  Footer
 };
