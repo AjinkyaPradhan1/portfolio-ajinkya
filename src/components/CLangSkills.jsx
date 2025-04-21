@@ -54,7 +54,7 @@ const CLangSkills = () => {
         </motion.div>
       </div>
       
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div className={`mt-5 sm:-mt-20 pb-14 px-4 sm ${styles.paddingX} flex flex-wrap gap-7`}>
        
         {/* {appDev.map((appDev) => (
           <div className='w-28 h-28' key={appDev.name}>
@@ -63,7 +63,7 @@ const CLangSkills = () => {
         ))} */}
 
         {appDev.map((skill) => (
-          <div className='w-28 h-28' key={skill.name}>
+          <div className='w-20 h-20' key={skill.name}>
             {typeof window !== "undefined" && window.innerWidth > 768 ? (
               <BallCanvas icon={skill.icon} />
             ) : (
@@ -88,14 +88,30 @@ const CLangSkills = () => {
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
        
-        {dvtools.map((dvtools) => (
+        {/* {dvtools.map((dvtools) => (
           <div className='w-28 h-28' key={dvtools.name}>
             <BallCanvas icon={dvtools.icon} />
           </div>
+        ))} */}
+
+        {dvtools.map((skill) => (
+          <div className='w-20 h-20' key={skill.name}>
+            {typeof window !== "undefined" && window.innerWidth > 768 ? (
+              <BallCanvas icon={skill.icon} />
+            ) : (
+              <div className='w-full h-full bg-white rounded-full flex items-center justify-center p-2'>
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className='w-[80%] h-[80%] object-contain'
+                />
+              </div>
+            )}
+          </div>
         ))}
+
       </div>
 
-      
     </div>
   );
 };
