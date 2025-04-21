@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { useEffect,useState } from "react";
 import { ComputersCanvas,ManCanvas,RobotCanvas,RoomViewCanvas } from "./canvas";
 
 const Hero = () => {
+
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth > 768);
+    };
+
+    checkScreenSize(); // initial check
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div className={`absolute inset-0 top-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col sm:flex-row items-start gap-5`}>
@@ -22,7 +37,7 @@ const Hero = () => {
         </div>
       </div>
 
-       <ManCanvas/> 
+      {isDesktop && <ManCanvas />}
 
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center '
