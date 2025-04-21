@@ -33,6 +33,7 @@ const ServiceCard = ({ index, title, icon }) => (
       </div>
     </motion.div>
   </Tilt>
+
 );
 
 const About = () => {
@@ -52,7 +53,7 @@ const About = () => {
         solutions within a dynamic, growth-oriented organization. 
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap gap-5'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
