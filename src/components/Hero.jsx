@@ -20,9 +20,13 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div className={`absolute inset-0 top-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col sm:flex-row items-start gap-5`}>
-      <div className='flex flex-row sm:flex-col justify-start items-center sm:mt-5'>
+      {/* <div className='flex flex-row sm:flex-col justify-start items-center sm:mt-5'>
           <div className='w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-[#915EFF]' />
           <div className='h-32 sm:h-80 w-1 violet-gradient mt-2 sm:mt-0' />
+        </div> */}
+        <div className='hidden sm:flex flex-col justify-start items-center sm:mt-5'>
+          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
+          <div className='h-80 w-1 violet-gradient mt-0' />
         </div>
 
         <div>
@@ -38,8 +42,8 @@ const Hero = () => {
 
       {/* ManCanvas with conditional size */}
       <div
-        className={`absolute w-full h-full ${
-          isMobile ? "scale-[0.6] top-28" : "top-0"
+        className={`absolute w-full h-full flex justify-center items-center ${
+          isMobile ? "scale-[0.8] top-28" : "top-0"
         }`}
       >
         <ManCanvas />
