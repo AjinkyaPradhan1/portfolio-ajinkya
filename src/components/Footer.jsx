@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center gap-4 order-2">
           <div className="flex gap-4 text-xl">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/AjinkyaPradhan1"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors duration-300"
@@ -33,20 +33,12 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/ajinkya-pradhan/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors duration-300"
             >
               <FaLinkedin />
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors duration-300"
-            >
-              <FaTwitter />
             </a>
           </div>
           <a
