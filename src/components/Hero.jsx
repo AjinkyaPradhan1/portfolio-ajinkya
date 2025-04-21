@@ -39,7 +39,7 @@ const Hero = () => {
       {/* ManCanvas with conditional size */}
       <div
         className={`absolute w-full h-full ${
-          isMobile ? "scale-[1.25] top-10" : ""
+          isMobile ? "scale-[0.6] top-28" : "top-0"
         }`}
       >
         <ManCanvas />
