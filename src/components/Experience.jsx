@@ -59,9 +59,9 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} animate={{ opacity: 1 }}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+          What Experience do I have so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Work Experience.
