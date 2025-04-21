@@ -11,7 +11,8 @@ const Footer = () => {
         <div className="flex items-center gap-3 justify-center md:justify-start">
           <img src={logo2} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-lg font-semibold">
-            Ajinkya <span className="hidden sm:inline">Pradhan</span>
+            Ajinkya Pradhan
+            {/* <span className="hidden sm:inline">Pradhan</span> */}
           </p>
         </div>
 
