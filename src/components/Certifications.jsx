@@ -106,7 +106,7 @@ const CertificationsCard = ({ certifications }) => {
 const Certification = () => {
   return (
     <>
-      <motion.div variants={textVariant() } >
+      <motion.div variants={textVariant()} animate={{ opacity: 1 }}>
         <p className={`${styles.sectionSubTextCerti} text-center`}>
           What Certifications have I done so far
         </p>
