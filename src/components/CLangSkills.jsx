@@ -100,4 +100,4 @@ const CLangSkills = () => {
   );
 };
 
-export default SectionWrapper(CLangSkills, "");
+export default SectionWrapper(CLangSkills, "clangskills");
