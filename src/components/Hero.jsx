@@ -5,17 +5,16 @@ import { ComputersCanvas,ManCanvas,RobotCanvas,RoomViewCanvas } from "./canvas";
 
 const Hero = () => {
 
-  const [isDesktop, setIsDesktop] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkScreenSize = () => {
-      setIsDesktop(window.innerWidth > 768);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    checkScreenSize(); // initial check
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => window.removeEventListener("resize", checkScreenSize);
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -37,7 +36,14 @@ const Hero = () => {
         </div>
       </div>
 
-      {isDesktop && <ManCanvas />}
+      {/* ManCanvas with conditional size */}
+      <div
+        className={`absolute w-full h-full ${
+          isMobile ? "scale-[0.6] top-28" : ""
+        }`}
+      >
+        <ManCanvas />
+      </div>
 
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center '
