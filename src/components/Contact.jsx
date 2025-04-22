@@ -7,12 +7,6 @@ import { RobotCanvas, TonyCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-
-//Template ID: template_omcpeqh
-//Service Id: service_nkohywo
-//public ID: Sv4nYx2tGjaZgnHsS
-
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -22,6 +16,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
 
   const handleChange = (e) => {
     const { target } = e;
@@ -36,6 +31,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setResponseMessage("");
 
     emailjs
       .send(
@@ -53,8 +49,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thankyou for reaching out to one of the finest developers. I'll get back to you soon.");
-
+          setResponseMessage("Thank you for reaching out to one of the finest developers. I'll get back to you soon.");
           setForm({
             name: "",
             email: "",
@@ -64,8 +59,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Sorry, your message couldn't be sent. Please try again.");
+          setResponseMessage("Sorry, your message couldn't be sent. Please try again.");
         }
       );
   };
@@ -81,6 +75,13 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
+        {/* Display response message */}
+        {responseMessage && (
+          <div className={`mt-4 p-4 rounded-lg ${responseMessage.includes("Thank") ? "bg-green-500" : "bg-red-500"} text-white`}>
+            {responseMessage}
+          </div>
+        )}
+        
         <form
           ref={formRef}
           onSubmit={handleSubmit}
