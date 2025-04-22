@@ -94,7 +94,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Please Enter your Name"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='sm:placeholder:text-[16px] placeholder:text-[12px] sm:placeholder:content-["Please_enter_your_name_completely"] placeholder:content-["Name"] bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium w-full'
             />
           </label>
           <label className='flex flex-col'>
@@ -104,8 +104,8 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="Please Enter your email address"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="Please Enter your Email Address"
+              className='sm:placeholder:text-[16px] placeholder:text-[12px] sm:placeholder:content-["Please_enter_your_email_address"] placeholder:content-["Email"] bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium w-full'
             />
           </label>
           <label className='flex flex-col'>
@@ -115,8 +115,8 @@ const Contact = () => {
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='Write your message here!!!!!!!!!!!!!'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder='Please Write your Message here'
+              className='sm:placeholder:text-[16px] placeholder:text-[12px] sm:placeholder:content-["Please_write_your_message_clearly"] placeholder:content-["Message"] bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium w-full resize-none'
             />
           </label>
 
