@@ -7,6 +7,12 @@ import { RobotCanvas, TonyCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+
+//Template ID: template_omcpeqh
+//Service Id: service_nkohywo
+//public ID: Sv4nYx2tGjaZgnHsS
+
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -33,8 +39,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        'service_nkohywo',
+        'template_omcpeqh',
         {
           from_name: form.name,
           to_name: "Ajinkya Pradhan",
@@ -42,12 +48,12 @@ const Contact = () => {
           to_email: "silent.thunder2050@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        'Sv4nYx2tGjaZgnHsS'
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert("Thankyou for reaching out to one of the finest developers. I'll get back to you soon.");
 
           setForm({
             name: "",
@@ -59,7 +65,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Sorry, your message couldn't be sent. Please try again.");
         }
       );
   };
@@ -87,7 +93,7 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="Please Enter your good name!!"
+              placeholder="Please Enter your Name"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -118,7 +124,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending Message..." : "Send"}
           </button>
         </form>
       </motion.div>
